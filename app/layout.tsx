@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LeftPanel from "@/components/LeftPanel/LeftPanel";
+import { Providers } from "./Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          <div className="bg-zinc-900 h-screen grid grid-cols-5">
+            <section className="bg-zinc-800 h-screen col-span-1">
+              <LeftPanel />
+            </section>
+            <section className="col-span-4 relative">{children}</section>
+          </div>
+        </Providers>
       </body>
     </html>
   );
