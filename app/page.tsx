@@ -1,4 +1,5 @@
 import ChatMessages from "@/components/ChatMessages/ChatMessages";
+import React from "react";
 
 export default function Home() {
   return (
