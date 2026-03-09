@@ -26,7 +26,7 @@ export default function ChatFooter(props: ChatProps) {
       />
       <button
         className="text-lg outline-none hover:cursor-pointer h-fit mr-2"
-        onClick={() => handleSend()}
+        onClick={handleSend}
       >
         <FontAwesomeIcon icon={faArrowCircleRight} className="text-2xl " />
       </button>
