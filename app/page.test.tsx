@@ -15,6 +15,6 @@ describe("Home", () => {
     render(<Home />);
 
     expect(screen.getByTestId("chat-messages")).toBeInTheDocument();
-    expect(screen.getByText("Hello, Ask me anything")).toBeInTheDocument();
+    expect(screen.getByText("Hello, Ask me anything!")).toBeInTheDocument();
   });
 });
